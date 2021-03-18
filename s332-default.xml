@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="https://github.com/freescale" name="fsl"/>
+  <remote fetch="git://code.qt.io/yocto" name="qt6"/>
+  <remote fetch="https://github.com/mendersoftware" name="mender"/>
+  <remote fetch="https://github.com/sergioprado" name="completion"/>
+  <remote fetch="https://test-en.suto-soft.com/S332" name="suto"/>
+
+  <project remote="yocto" name="poky" path="layers/poky" revison="d20ef1f5a5de7820b3e9b7f539b51f94954e9cd5"/>
+  <project remote="yocto" name="meta-security" path="layers/meta-security" revison="653474bdc5c6cfdf59f6f7342bcf1fd65110d3c8"/>
+  <project remote="yocto" name="meta-virtualization" path="layers/meta-virtualization" revison="89abc62b47f6f20db9d00a8ec9b2c1b6b60ac3f9"/>
+  <project remote="oe" name="meta-openembedded" path="layers/meta-openembedded" revison="346681e7bf9c78008a845fc89031be4fd4ceb3a1"/>
+  <project remote="fsl" name="meta-freescale" path="layers/meta-freescale" revison="dda61f20a42789c388b0d642d64d1e1d66ee75fc"/>
+  <project remote="fsl" name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revison="058316a502cdba7fad02df8c857c72e218b7bc45"/>
+  <project remote="fsl" name="meta-freescale-distro" path="layers/meta-freescale-distro" revison="5d882cdf079b3bde0bd9869ce3ca3db411acbf3b"/>
+  <project remote="qt6" name="meta-qt6" path="layers/meta-qt6" revision="9591f94ae46a2dfb7bf61fd53cc8b41df58ba0f4"/>
+  <project remote="mender" name="meta-mender" path="layers/meta-mender" revision="bd5a6de7f3e79f1bb37e18d02595ff31d22584ae"/>
+  <project remote="mender" name="meta-mender-community" path="layers/meta-mender-community" revision="bd63a1e6de12f7f96dfe2705599c517dac049e91"/>
+  <project remote="completion" name="bitbake-bash-completion" path="layers/bitbake-bash-completion" revision="214778445289c63738e77cfb0c0900c2ac932c26"/>
+  <project remote="suto" name="meta-suto" path="layers/meta-suto" revision="main">
+    <linkfile dest="poky-init-build-env" src="scripts/poky-init-build-env"/>
+    <linkfile dest="README.md" src="README.md"/>
+  </project>
+</manifest>

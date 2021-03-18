@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <default sync-j="4" revision="dunfell"/>
+
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="https://github.com/freescale" name="fsl"/>
+  <remote fetch="git://code.qt.io/yocto" name="qt6"/>
+  <remote fetch="https://github.com/mendersoftware" name="mender"/>
+  <remote fetch="https://github.com/sergioprado" name="completion"/>
+  <remote fetch="https://test-en.suto-soft.com/S332" name="suto"/>
+
+  <project remote="yocto" name="poky" path="layers/poky"/>
+  <project remote="yocto" name="meta-security" path="layers/meta-security"/>
+  <project remote="yocto" name="meta-virtualization" path="layers/meta-virtualization"/>
+  <project remote="oe" name="meta-openembedded" path="layers/meta-openembedded"/>
+  <project remote="fsl" name="meta-freescale" path="layers/meta-freescale"/>
+  <project remote="fsl" name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty"/>
+  <project remote="fsl" name="meta-freescale-distro" path="layers/meta-freescale-distro"/>
+  <project remote="qt6" name="meta-qt6" path="layers/meta-qt6" revision="6.1"/>
+  <project remote="mender" name="meta-mender" path="layers/meta-mender"/>
+  <project remote="mender" name="meta-mender-community" path="layers/meta-mender-community"/>
+  <project remote="completion" name="bitbake-bash-completion" path="layers/bitbake-bash-completion" revision="master"/>
+  <project remote="suto" name="meta-suto" path="layers/meta-suto" revision="main">
+    <linkfile dest="poky-init-build-env" src="scripts/poky-init-build-env"/>
+    <linkfile dest="README.md" src="README.md"/>
+  </project>
+</manifest>
